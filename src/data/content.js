@@ -126,7 +126,7 @@ export const projects = [
     description:
       'Co-developed (with Aayush Katoch) a study on model generalization under extreme data scarcity (~300 samples), benchmarking three transfer learning paradigms (scratch, ImageNet, medical-domain pretraining) with k-fold cross-validation. Achieved 92.02% accuracy and 0.9875 AUC (14% gain), producing interpretable findings on when domain-adjacent pretraining generalizes reliably.',
     tags: ['Transfer Learning', 'Limited Data', 'Uncertainty', 'Statistical Evaluation'],
-    image: null,
+    image: '/images/lowresource-transfer-learning-cover.svg',
     liveUrl: '',
     githubUrl: '',
     featured: false,
