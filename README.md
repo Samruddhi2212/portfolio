@@ -1,5 +1,6 @@
 # Portfolio
 
+**Live:** https://samruddhi-kaledeshmukh.netlify.app/
 **Repo:** https://github.com/Samruddhi2212/portfolio
 
 A lightweight, responsive portfolio site built with React + Vite. Dark, glassmorphism aesthetic with subtle scroll animations (framer-motion) — no heavy visuals, so it's easy to reskin.
