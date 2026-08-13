@@ -149,7 +149,7 @@ export const contact = {
   links: [
     { label: 'Email', value: 'kaledeshmukh.s@northeastern.edu', href: 'mailto:kaledeshmukh.s@northeastern.edu' },
     { label: 'GitHub', value: 'github.com/Samruddhi2212', href: 'https://github.com/Samruddhi2212' },
-    { label: 'LinkedIn', value: 'linkedin.com/in/yourusername', href: 'https://linkedin.com/in/yourusername' },
+    { label: 'LinkedIn', value: 'linkedin.com/in/samruddhi-k-1a4375399', href: 'https://www.linkedin.com/in/samruddhi-k-1a4375399' },
   ],
 }
 
