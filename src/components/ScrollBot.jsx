@@ -15,13 +15,14 @@ const SECTION_DATA = {
 
 // ── Striking multicolour palette for the bot's outline (fills stay bg-coloured) ──
 const BOT = {
-  red: '#c81a3a',
-  orange: '#ea580c',
-  amber: '#b45309',
-  teal: '#0f766e',
-  blue: '#1d4ed8',
-  purple: '#7e22ce',
-  pink: '#d6266a',
+  red: '#e5383b',
+  orange: '#fb8500',
+  amber: '#c9960c',
+  teal: '#00a8a8',
+  blue: '#2274e8',
+  purple: '#8e3bc9',
+  pink: '#e91e8c',
+  green: '#2fa84f',
 }
 
 // ── Eye expressions ─────────────────────────────────────────────────────────
@@ -367,13 +368,13 @@ export default function ScrollBot() {
         {/* chest panel */}
         <rect x="14" y="54" width="28" height="18" rx="4" fill={BOT.purple} fillOpacity="0.07" stroke={BOT.purple} strokeWidth="1" strokeOpacity="0.4"/>
         {/* chest lights */}
-        <circle cx="21" cy="63" r="2.5" fill={BOT.teal}>
+        <circle cx="21" cy="63" r="2.5" fill={BOT.green}>
           <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
         </circle>
         <circle cx="28" cy="63" r="2.5" fill={BOT.blue}>
           <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
         </circle>
-        <circle cx="35" cy="63" r="2.5" fill={BOT.purple}>
+        <circle cx="35" cy="63" r="2.5" fill={BOT.pink}>
           <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" begin="1.2s" repeatCount="indefinite"/>
         </circle>
         {/* body detail */}
@@ -388,8 +389,8 @@ export default function ScrollBot() {
 
         {/* right arm */}
         <g transform={`rotate(${rightArmRot}, 48, 58)`}>
-          <rect x="48" y="52" width="8" height="22" rx="4" fill="var(--bg)" stroke={BOT.teal} strokeWidth="1.2" strokeOpacity="0.6"/>
-          <circle cx="52" cy="76" r="3.5" fill="var(--bg)" stroke={BOT.teal} strokeWidth="1" strokeOpacity="0.7"/>
+          <rect x="48" y="52" width="8" height="22" rx="4" fill="var(--bg)" stroke={BOT.green} strokeWidth="1.2" strokeOpacity="0.6"/>
+          <circle cx="52" cy="76" r="3.5" fill="var(--bg)" stroke={BOT.green} strokeWidth="1" strokeOpacity="0.7"/>
         </g>
 
         {/* legs */}
