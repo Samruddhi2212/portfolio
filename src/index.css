@@ -5,15 +5,15 @@
 }
 
 :root {
-  --bg: #0d0a10;
-  --bg2: #1b1420;
-  --ruby: #ea3a54;
-  --gold: #d4af37;
+  --bg: #f7f3ea;
+  --bg2: #efe8d8;
+  --ruby: #c81a3a;
+  --gold: #7a5b15;
   --rose: #ff2d78;
-  --text: #f5eef0;
-  --muted: #b09aa3;
-  --card: rgba(255, 255, 255, 0.04);
-  --border: rgba(234, 58, 84, 0.2);
+  --text: #3b2417;
+  --muted: #7a6a5f;
+  --card: rgba(255, 255, 255, 0.55);
+  --border: rgba(200, 26, 58, 0.18);
 }
 
 html {
@@ -56,9 +56,10 @@ section {
 
 /* Glassmorphism card */
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(27, 20, 32, 0.55) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(239, 232, 216, 0.4) 100%);
   border: 1px solid var(--border);
   border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(59, 36, 23, 0.06);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
 }
@@ -99,8 +100,8 @@ section {
   border-radius: 20px;
   font-size: 0.78rem;
   font-family: 'JetBrains Mono', monospace;
-  background: rgba(234, 58, 84, 0.08);
-  border: 1px solid rgba(234, 58, 84, 0.25);
+  background: rgba(200, 26, 58, 0.08);
+  border: 1px solid rgba(200, 26, 58, 0.25);
   color: var(--ruby);
 }
 
@@ -125,8 +126,8 @@ section {
 }
 
 .btn:hover {
-  background: rgba(234, 58, 84, 0.1);
-  box-shadow: 0 0 24px rgba(234, 58, 84, 0.2);
+  background: rgba(200, 26, 58, 0.1);
+  box-shadow: 0 0 24px rgba(200, 26, 58, 0.2);
 }
 
 .btn-solid {
@@ -136,7 +137,7 @@ section {
 }
 
 .btn-solid:hover {
-  box-shadow: 0 0 30px rgba(234, 58, 84, 0.35);
+  box-shadow: 0 0 30px rgba(200, 26, 58, 0.35);
 }
 
 /* --- Navbar --- */
@@ -155,9 +156,9 @@ section {
 }
 
 .navbar.scrolled {
-  background: rgba(13, 10, 16, 0.92);
+  background: rgba(247, 243, 234, 0.92);
   backdrop-filter: blur(20px);
-  border-bottom-color: rgba(234, 58, 84, 0.1);
+  border-bottom-color: rgba(200, 26, 58, 0.1);
 }
 
 .navbar-logo {
@@ -219,7 +220,7 @@ section {
   width: 70vw;
   max-width: 320px;
   height: 100vh;
-  background: rgba(27, 20, 32, 0.97);
+  background: rgba(239, 232, 216, 0.97);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
@@ -227,7 +228,7 @@ section {
   justify-content: center;
   gap: 32px;
   z-index: 600;
-  border-left: 1px solid rgba(234, 58, 84, 0.15);
+  border-left: 1px solid rgba(200, 26, 58, 0.15);
 }
 
 .mobile-menu a {
@@ -323,7 +324,7 @@ section {
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(234, 58, 84, 0.1);
+  border-bottom: 1px solid rgba(200, 26, 58, 0.1);
   font-size: 0.92rem;
 }
 
@@ -402,7 +403,7 @@ section {
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--ruby);
-  box-shadow: 0 0 12px rgba(234, 58, 84, 0.5);
+  box-shadow: 0 0 12px rgba(200, 26, 58, 0.5);
 }
 
 .timeline-item h3 {
@@ -470,14 +471,14 @@ section {
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, rgba(234, 58, 84, 0.12), rgba(212, 175, 55, 0.12));
+  background: linear-gradient(135deg, rgba(200, 26, 58, 0.12), rgba(122, 91, 21, 0.12));
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  border: 1px dashed rgba(234, 58, 84, 0.25);
+  border: 1px dashed rgba(200, 26, 58, 0.25);
 }
 
 .project-card h3 {
@@ -566,8 +567,8 @@ section {
 }
 
 .contact-link:hover {
-  border-color: rgba(234, 58, 84, 0.5);
-  box-shadow: 0 0 24px rgba(234, 58, 84, 0.12);
+  border-color: rgba(200, 26, 58, 0.5);
+  box-shadow: 0 0 24px rgba(200, 26, 58, 0.12);
   transform: translateY(-2px);
 }
 
@@ -585,7 +586,7 @@ section {
 .footer {
   margin-top: 100px;
   padding-top: 24px;
-  border-top: 1px solid rgba(234, 58, 84, 0.08);
+  border-top: 1px solid rgba(200, 26, 58, 0.08);
   text-align: center;
   color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
