@@ -5,15 +5,15 @@
 }
 
 :root {
-  --bg: #1c1330;
-  --bg2: #2a1d47;
-  --gold: #f6c667;
-  --lavender: #b98ee8;
+  --bg: #f8ecb0;
+  --bg2: #f2df8a;
+  --gold: #8c5e14;
+  --lavender: #7c4fb0;
   --coral: #ff9fb7;
-  --text: #f5f0f8;
-  --muted: #c9b8d6;
-  --card: rgba(255, 214, 235, 0.05);
-  --border: rgba(246, 198, 103, 0.18);
+  --text: #2a1d47;
+  --muted: #6b5480;
+  --card: rgba(255, 255, 255, 0.45);
+  --border: rgba(140, 94, 20, 0.18);
 }
 
 html {
@@ -56,7 +56,7 @@ section {
 
 /* Glassmorphism card */
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(42, 29, 71, 0.55) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(242, 223, 138, 0.35) 100%);
   border: 1px solid var(--border);
   border-radius: 14px;
   backdrop-filter: blur(20px) saturate(160%);
@@ -99,8 +99,8 @@ section {
   border-radius: 20px;
   font-size: 0.78rem;
   font-family: 'JetBrains Mono', monospace;
-  background: rgba(246, 198, 103, 0.08);
-  border: 1px solid rgba(246, 198, 103, 0.25);
+  background: rgba(140, 94, 20, 0.08);
+  border: 1px solid rgba(140, 94, 20, 0.25);
   color: var(--gold);
 }
 
@@ -125,18 +125,18 @@ section {
 }
 
 .btn:hover {
-  background: rgba(246, 198, 103, 0.1);
-  box-shadow: 0 0 24px rgba(246, 198, 103, 0.2);
+  background: rgba(140, 94, 20, 0.1);
+  box-shadow: 0 0 24px rgba(140, 94, 20, 0.2);
 }
 
 .btn-solid {
   background: linear-gradient(135deg, var(--gold), var(--lavender));
-  color: #1c1330;
+  color: #fdf6e3;
   border: none;
 }
 
 .btn-solid:hover {
-  box-shadow: 0 0 30px rgba(246, 198, 103, 0.35);
+  box-shadow: 0 0 30px rgba(140, 94, 20, 0.35);
 }
 
 /* --- Navbar --- */
@@ -155,9 +155,9 @@ section {
 }
 
 .navbar.scrolled {
-  background: rgba(28, 19, 48, 0.92);
+  background: rgba(248, 236, 176, 0.92);
   backdrop-filter: blur(20px);
-  border-bottom-color: rgba(246, 198, 103, 0.1);
+  border-bottom-color: rgba(140, 94, 20, 0.1);
 }
 
 .navbar-logo {
@@ -219,7 +219,7 @@ section {
   width: 70vw;
   max-width: 320px;
   height: 100vh;
-  background: rgba(42, 29, 71, 0.97);
+  background: rgba(242, 223, 138, 0.97);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
@@ -227,7 +227,7 @@ section {
   justify-content: center;
   gap: 32px;
   z-index: 600;
-  border-left: 1px solid rgba(246, 198, 103, 0.15);
+  border-left: 1px solid rgba(140, 94, 20, 0.15);
 }
 
 .mobile-menu a {
@@ -323,7 +323,7 @@ section {
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(246, 198, 103, 0.1);
+  border-bottom: 1px solid rgba(140, 94, 20, 0.1);
   font-size: 0.92rem;
 }
 
@@ -402,7 +402,7 @@ section {
   border-radius: 50%;
   background: var(--bg);
   border: 2px solid var(--gold);
-  box-shadow: 0 0 12px rgba(246, 198, 103, 0.5);
+  box-shadow: 0 0 12px rgba(140, 94, 20, 0.5);
 }
 
 .timeline-item h3 {
@@ -470,14 +470,14 @@ section {
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, rgba(246, 198, 103, 0.12), rgba(185, 142, 232, 0.12));
+  background: linear-gradient(135deg, rgba(140, 94, 20, 0.12), rgba(124, 79, 176, 0.12));
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  border: 1px dashed rgba(246, 198, 103, 0.25);
+  border: 1px dashed rgba(140, 94, 20, 0.25);
 }
 
 .project-card h3 {
@@ -566,8 +566,8 @@ section {
 }
 
 .contact-link:hover {
-  border-color: rgba(246, 198, 103, 0.5);
-  box-shadow: 0 0 24px rgba(246, 198, 103, 0.12);
+  border-color: rgba(140, 94, 20, 0.5);
+  box-shadow: 0 0 24px rgba(140, 94, 20, 0.12);
   transform: translateY(-2px);
 }
 
@@ -585,7 +585,7 @@ section {
 .footer {
   margin-top: 100px;
   padding-top: 24px;
-  border-top: 1px solid rgba(246, 198, 103, 0.08);
+  border-top: 1px solid rgba(140, 94, 20, 0.08);
   text-align: center;
   color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
