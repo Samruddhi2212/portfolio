@@ -5,15 +5,15 @@
 }
 
 :root {
-  --bg: #05060f;
-  --bg2: #0d0e1f;
+  --bg: #10121f;
+  --bg2: #191b30;
   --cyan: #00d4ff;
   --purple: #7c3aed;
   --pink: #ec4899;
   --text: #e2e8f0;
   --muted: #94a3b8;
-  --card: rgba(255, 255, 255, 0.03);
-  --border: rgba(0, 212, 255, 0.15);
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(0, 212, 255, 0.18);
 }
 
 html {
