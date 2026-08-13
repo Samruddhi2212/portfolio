@@ -1,10 +1,11 @@
 # Portfolio
 
-Repo: https://github.com/Samruddhi2212/portfolio
+**Live:** https://samruddhi2212.github.io/portfolio/
+**Repo:** https://github.com/Samruddhi2212/portfolio
 
 A lightweight, responsive portfolio site built with React + Vite. Dark, glassmorphism aesthetic with subtle scroll animations (framer-motion) — no heavy visuals, so it's easy to reskin.
 
-There's no live deployment yet since the repo is private (GitHub Pages requires a public repo on the free plan). Once you're ready to publish, either make the repo public and enable GitHub Pages, or deploy to a host like Vercel/Netlify that supports private repos on their free tier — then add the live URL here.
+Deployed automatically via GitHub Actions ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)) — every push to `main` rebuilds and republishes the live site.
 
 ## Getting started
 
@@ -46,4 +47,4 @@ Edit the values there and the whole site updates — no need to touch component 
 
 ## Deploying
 
-This is a static Vite build, so it deploys to any static host (GitHub Pages, Vercel, Netlify). For GitHub Pages, build with `npm run build` and publish the `dist/` folder.
+Already wired up: pushing to `main` triggers the GitHub Actions workflow, which builds the site and publishes it to GitHub Pages at the live link above. No manual steps needed.
