@@ -113,6 +113,3 @@ Change these nine values and every button, gradient, glass card, and the mascot'
 
 Hosted on Netlify via [`netlify.toml`](netlify.toml) (`npm run build`, publish directory `dist`), connected directly to this repo through Netlify's GitHub integration. Push to `main` → Netlify rebuilds and republishes automatically. No manual deploy step, no CI config beyond what Netlify provides out of the box.
 
----
-
-If you're reading this because you're evaluating my work rather than forking a template — the more interesting engineering is one level down, in the Vision Transformer, DemCare, and transfer-learning projects described on the site itself (see the [Projects](https://samruddhi-kaledeshmukh.netlify.app/#projects) section). This repo is the front door; that's where the research lives.
