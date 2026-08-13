@@ -19,7 +19,7 @@ function ScrollProgress() {
         left: 0,
         right: 0,
         height: '2px',
-        background: 'linear-gradient(to right, #f6c667, #b98ee8, #ff9fb7)',
+        background: 'linear-gradient(to right, #ea3a54, #d4af37, #ff2d78)',
         transformOrigin: '0%',
         scaleX: scrollYProgress,
         zIndex: 9999,

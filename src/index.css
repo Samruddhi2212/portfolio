@@ -5,15 +5,15 @@
 }
 
 :root {
-  --bg: #f8ecb0;
-  --bg2: #f2df8a;
-  --gold: #8c5e14;
-  --lavender: #7c4fb0;
-  --coral: #ff9fb7;
-  --text: #2a1d47;
-  --muted: #6b5480;
-  --card: rgba(255, 255, 255, 0.45);
-  --border: rgba(140, 94, 20, 0.18);
+  --bg: #0d0a10;
+  --bg2: #1b1420;
+  --ruby: #ea3a54;
+  --gold: #d4af37;
+  --rose: #ff2d78;
+  --text: #f5eef0;
+  --muted: #b09aa3;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(234, 58, 84, 0.2);
 }
 
 html {
@@ -38,7 +38,7 @@ a {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--gold);
+  background: var(--ruby);
   border-radius: 4px;
 }
 
@@ -56,7 +56,7 @@ section {
 
 /* Glassmorphism card */
 .glass-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(242, 223, 138, 0.35) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(27, 20, 32, 0.55) 100%);
   border: 1px solid var(--border);
   border-radius: 14px;
   backdrop-filter: blur(20px) saturate(160%);
@@ -75,19 +75,19 @@ section {
 
 .section-title .number {
   font-family: 'JetBrains Mono', monospace;
-  color: var(--gold);
+  color: var(--ruby);
   font-size: 1rem;
 }
 
 .section-title .line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, var(--gold), transparent);
+  background: linear-gradient(to right, var(--ruby), transparent);
   max-width: 300px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--gold), var(--lavender));
+  background: linear-gradient(135deg, var(--ruby), var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -99,9 +99,9 @@ section {
   border-radius: 20px;
   font-size: 0.78rem;
   font-family: 'JetBrains Mono', monospace;
-  background: rgba(140, 94, 20, 0.08);
-  border: 1px solid rgba(140, 94, 20, 0.25);
-  color: var(--gold);
+  background: rgba(234, 58, 84, 0.08);
+  border: 1px solid rgba(234, 58, 84, 0.25);
+  color: var(--ruby);
 }
 
 .mono {
@@ -117,26 +117,26 @@ section {
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
-  border: 1px solid var(--gold);
-  color: var(--gold);
+  border: 1px solid var(--ruby);
+  color: var(--ruby);
   background: transparent;
   transition: background 0.2s, box-shadow 0.2s;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: rgba(140, 94, 20, 0.1);
-  box-shadow: 0 0 24px rgba(140, 94, 20, 0.2);
+  background: rgba(234, 58, 84, 0.1);
+  box-shadow: 0 0 24px rgba(234, 58, 84, 0.2);
 }
 
 .btn-solid {
-  background: linear-gradient(135deg, var(--gold), var(--lavender));
+  background: linear-gradient(135deg, var(--ruby), var(--gold));
   color: #fdf6e3;
   border: none;
 }
 
 .btn-solid:hover {
-  box-shadow: 0 0 30px rgba(140, 94, 20, 0.35);
+  box-shadow: 0 0 30px rgba(234, 58, 84, 0.35);
 }
 
 /* --- Navbar --- */
@@ -155,15 +155,15 @@ section {
 }
 
 .navbar.scrolled {
-  background: rgba(248, 236, 176, 0.92);
+  background: rgba(13, 10, 16, 0.92);
   backdrop-filter: blur(20px);
-  border-bottom-color: rgba(140, 94, 20, 0.1);
+  border-bottom-color: rgba(234, 58, 84, 0.1);
 }
 
 .navbar-logo {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--ruby);
   text-decoration: none;
   letter-spacing: 0.05em;
 }
@@ -184,12 +184,12 @@ section {
 }
 
 .nav-links a:hover {
-  color: var(--gold);
+  color: var(--ruby);
 }
 
 .nav-number {
   font-family: 'JetBrains Mono', monospace;
-  color: var(--lavender);
+  color: var(--gold);
   font-size: 0.75rem;
   margin-right: 4px;
 }
@@ -208,7 +208,7 @@ section {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--gold);
+  background: var(--ruby);
   border-radius: 2px;
 }
 
@@ -219,7 +219,7 @@ section {
   width: 70vw;
   max-width: 320px;
   height: 100vh;
-  background: rgba(242, 223, 138, 0.97);
+  background: rgba(27, 20, 32, 0.97);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
@@ -227,7 +227,7 @@ section {
   justify-content: center;
   gap: 32px;
   z-index: 600;
-  border-left: 1px solid rgba(140, 94, 20, 0.15);
+  border-left: 1px solid rgba(234, 58, 84, 0.15);
 }
 
 .mobile-menu a {
@@ -246,7 +246,7 @@ section {
 
 .hero-eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  color: var(--gold);
+  color: var(--ruby);
   font-size: 0.95rem;
   margin-bottom: 20px;
   display: flex;
@@ -323,7 +323,7 @@ section {
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(140, 94, 20, 0.1);
+  border-bottom: 1px solid rgba(234, 58, 84, 0.1);
   font-size: 0.92rem;
 }
 
@@ -356,7 +356,7 @@ section {
 
 .skill-card h3 {
   font-size: 1rem;
-  color: var(--gold);
+  color: var(--ruby);
   margin-bottom: 18px;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -380,7 +380,7 @@ section {
   top: 8px;
   bottom: 8px;
   width: 1px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
+  background: linear-gradient(to bottom, var(--ruby), transparent);
 }
 
 .timeline-item {
@@ -401,8 +401,8 @@ section {
   height: 12px;
   border-radius: 50%;
   background: var(--bg);
-  border: 2px solid var(--gold);
-  box-shadow: 0 0 12px rgba(140, 94, 20, 0.5);
+  border: 2px solid var(--ruby);
+  box-shadow: 0 0 12px rgba(234, 58, 84, 0.5);
 }
 
 .timeline-item h3 {
@@ -411,7 +411,7 @@ section {
 }
 
 .timeline-item .company {
-  color: var(--gold);
+  color: var(--ruby);
   font-weight: 500;
 }
 
@@ -442,7 +442,7 @@ section {
   content: '▹';
   position: absolute;
   left: 0;
-  color: var(--lavender);
+  color: var(--gold);
 }
 
 /* --- Projects --- */
@@ -470,14 +470,14 @@ section {
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, rgba(140, 94, 20, 0.12), rgba(124, 79, 176, 0.12));
+  background: linear-gradient(135deg, rgba(234, 58, 84, 0.12), rgba(212, 175, 55, 0.12));
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  border: 1px dashed rgba(140, 94, 20, 0.25);
+  border: 1px dashed rgba(234, 58, 84, 0.25);
 }
 
 .project-card h3 {
@@ -508,7 +508,7 @@ section {
 .project-links a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  color: var(--gold);
+  color: var(--ruby);
   text-decoration: none;
 }
 
@@ -566,8 +566,8 @@ section {
 }
 
 .contact-link:hover {
-  border-color: rgba(140, 94, 20, 0.5);
-  box-shadow: 0 0 24px rgba(140, 94, 20, 0.12);
+  border-color: rgba(234, 58, 84, 0.5);
+  box-shadow: 0 0 24px rgba(234, 58, 84, 0.12);
   transform: translateY(-2px);
 }
 
@@ -585,7 +585,7 @@ section {
 .footer {
   margin-top: 100px;
   padding-top: 24px;
-  border-top: 1px solid rgba(140, 94, 20, 0.08);
+  border-top: 1px solid rgba(234, 58, 84, 0.08);
   text-align: center;
   color: var(--muted);
   font-family: 'JetBrains Mono', monospace;

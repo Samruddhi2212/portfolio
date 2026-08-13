@@ -106,7 +106,7 @@ export const projects = [
     description:
       'Implemented a Siamese Vision Transformer from scratch in PyTorch (custom patch embedding, 12-layer multi-head self-attention, FPN-style decoder), then extended it with a Siamese Swin Transformer using hierarchical shifted-window attention for pixel-level change detection on bi-temporal satellite imagery. Trained on the LEVIR-CD benchmark (7,120 pairs); the Swin variant achieved an F1 of 0.8613 and IoU of 0.7564, a +3.77% F1 / +5.63% IoU gain over the ViT baseline. Presented as a poster at the Research and Innovation Showcase 2026.',
     tags: ['Computer Vision', 'Vision Transformers', 'Swin Transformers', 'PyTorch', 'Remote Sensing'],
-    image: null,
+    image: '/images/vit-change-detection-cover.svg',
     liveUrl: '',
     githubUrl: '',
     featured: true,
