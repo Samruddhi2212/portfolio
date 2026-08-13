@@ -7,6 +7,7 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Publications from './components/Publications'
 import Contact from './components/Contact'
+import ScrollBot from './components/ScrollBot'
 
 function ScrollProgress() {
   const { scrollYProgress } = useScroll()
@@ -32,6 +33,7 @@ export default function App() {
     <>
       <ScrollProgress />
       <Navbar />
+      <ScrollBot />
       <main>
         <Hero />
         <About />
