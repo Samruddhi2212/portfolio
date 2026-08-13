@@ -1,11 +1,10 @@
 # Portfolio
 
-**Live:** https://samruddhi2212.github.io/portfolio/
 **Repo:** https://github.com/Samruddhi2212/portfolio
 
 A lightweight, responsive portfolio site built with React + Vite. Dark, glassmorphism aesthetic with subtle scroll animations (framer-motion) — no heavy visuals, so it's easy to reskin.
 
-Deployed automatically via GitHub Actions ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)) — every push to `main` rebuilds and republishes the live site.
+Hosted on Netlify, connected directly to this repo — every push to `main` triggers a rebuild and republish automatically.
 
 ## Getting started
 
@@ -47,4 +46,4 @@ Edit the values there and the whole site updates — no need to touch component 
 
 ## Deploying
 
-Already wired up: pushing to `main` triggers the GitHub Actions workflow, which builds the site and publishes it to GitHub Pages at the live link above. No manual steps needed.
+Hosted on Netlify via [`netlify.toml`](netlify.toml) (build command `npm run build`, publish directory `dist`). Connected to this repo through Netlify's GitHub integration — pushing to `main` triggers a rebuild and republish, no manual steps needed.
