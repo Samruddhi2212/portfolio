@@ -13,18 +13,29 @@ const SECTION_DATA = {
   contact:      { bubble: 'Say hi? 👀',                 eyes: 'wink',     mouth: 'smile',   label: 'waving' },
 }
 
+// ── Striking multicolour palette for the bot's outline (fills stay bg-coloured) ──
+const BOT = {
+  red: '#c81a3a',
+  orange: '#ea580c',
+  amber: '#b45309',
+  teal: '#0f766e',
+  blue: '#1d4ed8',
+  purple: '#7e22ce',
+  pink: '#d6266a',
+}
+
 // ── Eye expressions ─────────────────────────────────────────────────────────
 function Eyes({ type }) {
   switch (type) {
     case 'wide': // hero — big excited eyes, blinking
       return (
         <>
-          <ellipse cx="21" cy="28" rx="4.5" ry="5" fill="#1b1420"/>
-          <ellipse cx="35" cy="28" rx="4.5" ry="5" fill="#1b1420"/>
-          <ellipse cx="21" cy="28" rx="3" ry="3.5" fill="#c81a3a">
+          <ellipse cx="21" cy="28" rx="4.5" ry="5" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <ellipse cx="35" cy="28" rx="4.5" ry="5" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <ellipse cx="21" cy="28" rx="3" ry="3.5" fill={BOT.red}>
             <animate attributeName="ry" values="3.5;0.4;3.5" dur="3.5s" repeatCount="indefinite"/>
           </ellipse>
-          <ellipse cx="35" cy="28" rx="3" ry="3.5" fill="#c81a3a">
+          <ellipse cx="35" cy="28" rx="3" ry="3.5" fill={BOT.red}>
             <animate attributeName="ry" values="3.5;0.4;3.5" dur="3.5s" begin="0.15s" repeatCount="indefinite"/>
           </ellipse>
           <circle cx="22" cy="27" r="0.9" fill="white" opacity="0.85"/>
@@ -34,97 +45,97 @@ function Eyes({ type }) {
     case 'thinking': // about — pupils drifted up-left, raised brows
       return (
         <>
-          <circle cx="21" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="35" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="19.5" cy="26.5" r="2.5" fill="#c81a3a"/>
-          <circle cx="33.5" cy="26.5" r="2.5" fill="#c81a3a"/>
+          <circle cx="21" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="35" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="19.5" cy="26.5" r="2.5" fill={BOT.red}/>
+          <circle cx="33.5" cy="26.5" r="2.5" fill={BOT.red}/>
           <circle cx="20" cy="26" r="0.8" fill="white" opacity="0.8"/>
           <circle cx="34" cy="26" r="0.8" fill="white" opacity="0.8"/>
           {/* raised eyebrows */}
-          <path d="M17 22.5 Q21 20.5 25 22.5" stroke="#c81a3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
-          <path d="M31 22.5 Q35 20.5 39 22.5" stroke="#c81a3a" strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+          <path d="M17 22.5 Q21 20.5 25 22.5" stroke={BOT.amber} strokeWidth="1.2" fill="none" strokeLinecap="round"/>
+          <path d="M31 22.5 Q35 20.5 39 22.5" stroke={BOT.amber} strokeWidth="1.2" fill="none" strokeLinecap="round"/>
         </>
       )
     case 'focused': // skills — narrow rectangular slits + furrowed brows
       return (
         <>
-          <rect x="16" y="25.5" width="10" height="5" rx="2.5" fill="#1b1420"/>
-          <rect x="30" y="25.5" width="10" height="5" rx="2.5" fill="#1b1420"/>
-          <rect x="17.5" y="26.5" width="7" height="3" rx="1.5" fill="#7a5b15"/>
-          <rect x="31.5" y="26.5" width="7" height="3" rx="1.5" fill="#7a5b15"/>
+          <rect x="16" y="25.5" width="10" height="5" rx="2.5" fill="var(--bg)" stroke={BOT.amber} strokeWidth="1"/>
+          <rect x="30" y="25.5" width="10" height="5" rx="2.5" fill="var(--bg)" stroke={BOT.amber} strokeWidth="1"/>
+          <rect x="17.5" y="26.5" width="7" height="3" rx="1.5" fill={BOT.amber}/>
+          <rect x="31.5" y="26.5" width="7" height="3" rx="1.5" fill={BOT.amber}/>
           {/* furrowed brows — angled inward */}
-          <line x1="16" y1="23" x2="26" y2="24.5" stroke="#7a5b15" strokeWidth="1.4" strokeLinecap="round"/>
-          <line x1="40" y1="23" x2="30" y2="24.5" stroke="#7a5b15" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="16" y1="23" x2="26" y2="24.5" stroke={BOT.amber} strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="40" y1="23" x2="30" y2="24.5" stroke={BOT.amber} strokeWidth="1.4" strokeLinecap="round"/>
         </>
       )
     case 'reading': // experience — glasses overlay
       return (
         <>
-          <circle cx="21" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="35" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="21" cy="28" r="2.4" fill="#c81a3a">
+          <circle cx="21" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="35" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="21" cy="28" r="2.4" fill={BOT.red}>
             <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="35" cy="28" r="2.4" fill="#c81a3a">
+          <circle cx="35" cy="28" r="2.4" fill={BOT.red}>
             <animate attributeName="opacity" values="1;0.4;1" dur="2.5s" begin="0.3s" repeatCount="indefinite"/>
           </circle>
           <circle cx="22" cy="27" r="0.8" fill="white" opacity="0.8"/>
           <circle cx="36" cy="27" r="0.8" fill="white" opacity="0.8"/>
           {/* glasses frames */}
-          <rect x="15" y="23" width="12" height="10" rx="5" fill="none" stroke="rgba(200, 26, 58,0.55)" strokeWidth="0.9"/>
-          <rect x="29" y="23" width="12" height="10" rx="5" fill="none" stroke="rgba(200, 26, 58,0.55)" strokeWidth="0.9"/>
-          <line x1="27" y1="28" x2="29" y2="28" stroke="rgba(200, 26, 58,0.55)" strokeWidth="0.9"/>
+          <rect x="15" y="23" width="12" height="10" rx="5" fill="none" stroke={BOT.teal} strokeWidth="0.9" opacity="0.75"/>
+          <rect x="29" y="23" width="12" height="10" rx="5" fill="none" stroke={BOT.teal} strokeWidth="0.9" opacity="0.75"/>
+          <line x1="27" y1="28" x2="29" y2="28" stroke={BOT.teal} strokeWidth="0.9" opacity="0.75"/>
           {/* temples */}
-          <line x1="14" y1="26" x2="11" y2="25" stroke="rgba(200, 26, 58,0.4)" strokeWidth="0.8"/>
-          <line x1="41" y1="26" x2="44" y2="25" stroke="rgba(200, 26, 58,0.4)" strokeWidth="0.8"/>
+          <line x1="14" y1="26" x2="11" y2="25" stroke={BOT.teal} strokeWidth="0.8" opacity="0.6"/>
+          <line x1="41" y1="26" x2="44" y2="25" stroke={BOT.teal} strokeWidth="0.8" opacity="0.6"/>
         </>
       )
     case 'stars': // projects — 4-point star pupils, excited
       return (
         <>
-          <circle cx="21" cy="28" r="4.5" fill="#1b1420"/>
-          <circle cx="35" cy="28" r="4.5" fill="#1b1420"/>
+          <circle cx="21" cy="28" r="4.5" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="35" cy="28" r="4.5" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
           {/* 4-point star left at (21,28) */}
-          <path d="M21 23.5 L22.4 26.6 L25.5 28 L22.4 29.4 L21 32.5 L19.6 29.4 L16.5 28 L19.6 26.6 Z" fill="#f59e0b"/>
+          <path d="M21 23.5 L22.4 26.6 L25.5 28 L22.4 29.4 L21 32.5 L19.6 29.4 L16.5 28 L19.6 26.6 Z" fill={BOT.orange}/>
           {/* 4-point star right at (35,28) */}
-          <path d="M35 23.5 L36.4 26.6 L39.5 28 L36.4 29.4 L35 32.5 L33.6 29.4 L30.5 28 L33.6 26.6 Z" fill="#f59e0b"/>
+          <path d="M35 23.5 L36.4 26.6 L39.5 28 L36.4 29.4 L35 32.5 L33.6 29.4 L30.5 28 L33.6 26.6 Z" fill={BOT.orange}/>
           {/* sparkle marks */}
-          <line x1="21" y1="20" x2="21" y2="22" stroke="#f59e0b" strokeWidth="1.2" strokeLinecap="round"/>
-          <line x1="35" y1="20" x2="35" y2="22" stroke="#f59e0b" strokeWidth="1.2" strokeLinecap="round"/>
-          <line x1="14" y1="24" x2="15.5" y2="25" stroke="#f59e0b" strokeWidth="1" strokeLinecap="round" opacity="0.7"/>
-          <line x1="42" y1="24" x2="40.5" y2="25" stroke="#f59e0b" strokeWidth="1" strokeLinecap="round" opacity="0.7"/>
+          <line x1="21" y1="20" x2="21" y2="22" stroke={BOT.orange} strokeWidth="1.2" strokeLinecap="round"/>
+          <line x1="35" y1="20" x2="35" y2="22" stroke={BOT.orange} strokeWidth="1.2" strokeLinecap="round"/>
+          <line x1="14" y1="24" x2="15.5" y2="25" stroke={BOT.orange} strokeWidth="1" strokeLinecap="round" opacity="0.7"/>
+          <line x1="42" y1="24" x2="40.5" y2="25" stroke={BOT.orange} strokeWidth="1" strokeLinecap="round" opacity="0.7"/>
         </>
       )
     case 'proud': // publications — pink/magenta glow eyes + sparkles
       return (
         <>
-          <circle cx="21" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="35" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="21" cy="28" r="2.5" fill="#ff2d78">
+          <circle cx="21" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="35" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="21" cy="28" r="2.5" fill={BOT.pink}>
             <animate attributeName="r" values="2.5;3;2.5" dur="1.8s" repeatCount="indefinite"/>
           </circle>
-          <circle cx="35" cy="28" r="2.5" fill="#ff2d78">
+          <circle cx="35" cy="28" r="2.5" fill={BOT.pink}>
             <animate attributeName="r" values="2.5;3;2.5" dur="1.8s" begin="0.4s" repeatCount="indefinite"/>
           </circle>
           <circle cx="22" cy="27" r="0.9" fill="white" opacity="0.9"/>
           <circle cx="36" cy="27" r="0.9" fill="white" opacity="0.9"/>
           {/* tiny sparkles */}
-          <path d="M11 21 L11.8 22.5 L13.5 22.5 L12.2 23.5 L12.7 25 L11 24.2 L9.3 25 L9.8 23.5 L8.5 22.5 L10.2 22.5 Z" fill="#f59e0b" opacity="0.8"/>
-          <path d="M43 21 L43.8 22.5 L45.5 22.5 L44.2 23.5 L44.7 25 L43 24.2 L41.3 25 L41.8 23.5 L40.5 22.5 L42.2 22.5 Z" fill="#f59e0b" opacity="0.8"/>
+          <path d="M11 21 L11.8 22.5 L13.5 22.5 L12.2 23.5 L12.7 25 L11 24.2 L9.3 25 L9.8 23.5 L8.5 22.5 L10.2 22.5 Z" fill={BOT.amber} opacity="0.8"/>
+          <path d="M43 21 L43.8 22.5 L45.5 22.5 L44.2 23.5 L44.7 25 L43 24.2 L41.3 25 L41.8 23.5 L40.5 22.5 L42.2 22.5 Z" fill={BOT.amber} opacity="0.8"/>
         </>
       )
     case 'wink': // contact — left normal, right eye closed curved line
     default:
       return (
         <>
-          <circle cx="21" cy="28" r="4" fill="#1b1420"/>
-          <circle cx="21" cy="28" r="2.5" fill="#c81a3a">
+          <circle cx="21" cy="28" r="4" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <circle cx="21" cy="28" r="2.5" fill={BOT.red}>
             <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
           </circle>
           <circle cx="22" cy="27" r="0.8" fill="white" opacity="0.8"/>
           {/* right eye — winking, closed arc */}
-          <rect x="30" y="23" width="10" height="10" rx="5" fill="#1b1420"/>
-          <path d="M31 28 Q35 23.5 39 28" stroke="#c81a3a" strokeWidth="1.8" fill="none" strokeLinecap="round"/>
+          <rect x="30" y="23" width="10" height="10" rx="5" fill="var(--bg)" stroke={BOT.red} strokeWidth="1"/>
+          <path d="M31 28 Q35 23.5 39 28" stroke={BOT.red} strokeWidth="1.8" fill="none" strokeLinecap="round"/>
         </>
       )
   }
@@ -134,19 +145,19 @@ function Eyes({ type }) {
 function Mouth({ type }) {
   switch (type) {
     case 'smile':
-      return <path d="M19 37 Q28 42.5 37 37" stroke="#c81a3a" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+      return <path d="M19 37 Q28 42.5 37 37" stroke={BOT.red} strokeWidth="1.5" strokeLinecap="round" fill="none"/>
     case 'smirk':
-      return <path d="M20 37.5 Q25 40.5 33 38" stroke="#7a5b15" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+      return <path d="M20 37.5 Q25 40.5 33 38" stroke={BOT.amber} strokeWidth="1.5" strokeLinecap="round" fill="none"/>
     case 'excited':
       return (
         <>
-          <path d="M18 36.5 Q28 43.5 38 36.5" stroke="#c81a3a" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
-          <ellipse cx="28" cy="40" rx="5.5" ry="2.5" fill="#7a5b15" opacity="0.45"/>
+          <path d="M18 36.5 Q28 43.5 38 36.5" stroke={BOT.red} strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+          <ellipse cx="28" cy="40" rx="5.5" ry="2.5" fill={BOT.amber} opacity="0.45"/>
         </>
       )
     case 'neutral':
     default:
-      return <line x1="20" y1="37" x2="36" y2="37" stroke="#c81a3a" strokeWidth="1.5" strokeLinecap="round"/>
+      return <line x1="20" y1="37" x2="36" y2="37" stroke={BOT.red} strokeWidth="1.5" strokeLinecap="round"/>
   }
 }
 
@@ -214,27 +225,27 @@ function Laptop() {
     >
       <svg width="54" height="36" viewBox="0 0 54 36" fill="none">
         {/* screen lid */}
-        <rect x="3" y="0" width="48" height="27" rx="3" fill="#0d0a10" stroke="#c81a3a" strokeWidth="1"/>
-        <rect x="6" y="3" width="42" height="21" rx="1.5" fill="#0d0a10"/>
+        <rect x="3" y="0" width="48" height="27" rx="3" fill="var(--bg)" stroke={BOT.blue} strokeWidth="1"/>
+        <rect x="6" y="3" width="42" height="21" rx="1.5" fill="var(--bg)"/>
         {/* code lines on screen */}
-        <rect x="9"  y="7"  width="20" height="1.5" rx="0.75" fill="rgba(200, 26, 58,0.55)"/>
-        <rect x="9"  y="11" width="28" height="1.5" rx="0.75" fill="rgba(122, 91, 21,0.45)"/>
-        <rect x="9"  y="15" width="16" height="1.5" rx="0.75" fill="rgba(200, 26, 58,0.38)"/>
-        <rect x="9"  y="19" width="22" height="1.5" rx="0.75" fill="rgba(236,72,153,0.4)"/>
+        <rect x="9"  y="7"  width="20" height="1.5" rx="0.75" fill={BOT.blue} opacity="0.55"/>
+        <rect x="9"  y="11" width="28" height="1.5" rx="0.75" fill={BOT.amber} opacity="0.5"/>
+        <rect x="9"  y="15" width="16" height="1.5" rx="0.75" fill={BOT.teal} opacity="0.5"/>
+        <rect x="9"  y="19" width="22" height="1.5" rx="0.75" fill={BOT.pink} opacity="0.5"/>
         {/* blinking cursor */}
-        <rect x="26" y="15" width="1.5" height="1.5" fill="#c81a3a">
+        <rect x="26" y="15" width="1.5" height="1.5" fill={BOT.blue}>
           <animate attributeName="opacity" values="1;0;1" dur="0.65s" repeatCount="indefinite"/>
         </rect>
         {/* keyboard base */}
-        <rect x="0" y="27" width="54" height="9" rx="2.5" fill="#0d0a10" stroke="#7a5b15" strokeWidth="1"/>
+        <rect x="0" y="27" width="54" height="9" rx="2.5" fill="var(--bg)" stroke={BOT.purple} strokeWidth="1"/>
         {/* key hints */}
         {[5,11,17,23,35,41].map(x => (
-          <rect key={x} x={x} y="29.5" width="4" height="3" rx="0.8" fill="rgba(122, 91, 21,0.3)"/>
+          <rect key={x} x={x} y="29.5" width="4" height="3" rx="0.8" fill={BOT.purple} opacity="0.3"/>
         ))}
         {/* spacebar */}
-        <rect x="20" y="29.5" width="14" height="3" rx="0.8" fill="rgba(122, 91, 21,0.2)"/>
+        <rect x="20" y="29.5" width="14" height="3" rx="0.8" fill={BOT.purple} opacity="0.2"/>
         {/* hinge line */}
-        <line x1="2" y1="27" x2="52" y2="27" stroke="rgba(200, 26, 58,0.2)" strokeWidth="0.5"/>
+        <line x1="2" y1="27" x2="52" y2="27" stroke={BOT.blue} strokeWidth="0.5" opacity="0.3"/>
       </svg>
     </motion.div>
   )
@@ -331,16 +342,16 @@ export default function ScrollBot() {
       {/* Bot SVG */}
       <svg width="56" height="120" viewBox="0 0 56 120" fill="none">
         {/* antenna */}
-        <line x1="28" y1="4" x2="28" y2="14" stroke="#c81a3a" strokeWidth="2" strokeLinecap="round"/>
-        <circle cx="28" cy="3" r="3" fill="#c81a3a">
+        <line x1="28" y1="4" x2="28" y2="14" stroke={BOT.pink} strokeWidth="2" strokeLinecap="round"/>
+        <circle cx="28" cy="3" r="3" fill={BOT.pink}>
           <animate attributeName="r" values="3;4.5;3" dur="1.5s" repeatCount="indefinite"/>
           <animate attributeName="opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
         </circle>
 
         {/* head */}
-        <rect x="10" y="14" width="36" height="28" rx="8" fill="#1b1420" stroke="#c81a3a" strokeWidth="1.5"/>
+        <rect x="10" y="14" width="36" height="28" rx="8" fill="var(--bg)" stroke={BOT.red} strokeWidth="1.5"/>
         {/* visor */}
-        <rect x="14" y="18" width="28" height="18" rx="5" fill="rgba(200, 26, 58,0.06)" stroke="rgba(200, 26, 58,0.35)" strokeWidth="1"/>
+        <rect x="14" y="18" width="28" height="18" rx="5" fill={BOT.teal} fillOpacity="0.07" stroke={BOT.teal} strokeWidth="1" strokeOpacity="0.5"/>
 
         {/* dynamic eyes */}
         <Eyes type={data.eyes} />
@@ -349,47 +360,47 @@ export default function ScrollBot() {
         <Mouth type={data.mouth} />
 
         {/* neck */}
-        <rect x="24" y="42" width="8" height="6" rx="2" fill="#1b1420" stroke="rgba(200, 26, 58,0.3)" strokeWidth="1"/>
+        <rect x="24" y="42" width="8" height="6" rx="2" fill="var(--bg)" stroke={BOT.amber} strokeWidth="1" strokeOpacity="0.5"/>
 
         {/* body */}
-        <rect x="8" y="48" width="40" height="38" rx="8" fill="#1b1420" stroke="#7a5b15" strokeWidth="1.5"/>
+        <rect x="8" y="48" width="40" height="38" rx="8" fill="var(--bg)" stroke={BOT.orange} strokeWidth="1.5"/>
         {/* chest panel */}
-        <rect x="14" y="54" width="28" height="18" rx="4" fill="rgba(122, 91, 21,0.07)" stroke="rgba(122, 91, 21,0.3)" strokeWidth="1"/>
+        <rect x="14" y="54" width="28" height="18" rx="4" fill={BOT.purple} fillOpacity="0.07" stroke={BOT.purple} strokeWidth="1" strokeOpacity="0.4"/>
         {/* chest lights */}
-        <circle cx="21" cy="63" r="2.5" fill="#7a5b15">
+        <circle cx="21" cy="63" r="2.5" fill={BOT.teal}>
           <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
         </circle>
-        <circle cx="28" cy="63" r="2.5" fill="#c81a3a">
+        <circle cx="28" cy="63" r="2.5" fill={BOT.blue}>
           <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
         </circle>
-        <circle cx="35" cy="63" r="2.5" fill="#ff2d78">
+        <circle cx="35" cy="63" r="2.5" fill={BOT.purple}>
           <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" begin="1.2s" repeatCount="indefinite"/>
         </circle>
         {/* body detail */}
-        <line x1="14" y1="76" x2="42" y2="76" stroke="rgba(200, 26, 58,0.2)" strokeWidth="1"/>
-        <line x1="14" y1="80" x2="36" y2="80" stroke="rgba(200, 26, 58,0.1)" strokeWidth="1"/>
+        <line x1="14" y1="76" x2="42" y2="76" stroke={BOT.orange} strokeWidth="1" strokeOpacity="0.3"/>
+        <line x1="14" y1="80" x2="36" y2="80" stroke={BOT.orange} strokeWidth="1" strokeOpacity="0.15"/>
 
         {/* left arm */}
         <g transform={`rotate(${leftArmRot}, 8, 58)`}>
-          <rect x="0" y="52" width="8" height="22" rx="4" fill="#1b1420" stroke="rgba(200, 26, 58,0.4)" strokeWidth="1.2"/>
-          <circle cx="4" cy="76" r="3.5" fill="#1b1420" stroke="rgba(200, 26, 58,0.5)" strokeWidth="1"/>
+          <rect x="0" y="52" width="8" height="22" rx="4" fill="var(--bg)" stroke={BOT.blue} strokeWidth="1.2" strokeOpacity="0.6"/>
+          <circle cx="4" cy="76" r="3.5" fill="var(--bg)" stroke={BOT.blue} strokeWidth="1" strokeOpacity="0.7"/>
         </g>
 
         {/* right arm */}
         <g transform={`rotate(${rightArmRot}, 48, 58)`}>
-          <rect x="48" y="52" width="8" height="22" rx="4" fill="#1b1420" stroke="rgba(200, 26, 58,0.4)" strokeWidth="1.2"/>
-          <circle cx="52" cy="76" r="3.5" fill="#1b1420" stroke="rgba(200, 26, 58,0.5)" strokeWidth="1"/>
+          <rect x="48" y="52" width="8" height="22" rx="4" fill="var(--bg)" stroke={BOT.teal} strokeWidth="1.2" strokeOpacity="0.6"/>
+          <circle cx="52" cy="76" r="3.5" fill="var(--bg)" stroke={BOT.teal} strokeWidth="1" strokeOpacity="0.7"/>
         </g>
 
         {/* legs */}
-        <rect x="14" y="86" width="11" height="24" rx="5" fill="#1b1420" stroke="rgba(122, 91, 21,0.5)" strokeWidth="1.2"/>
-        <rect x="31" y="86" width="11" height="24" rx="5" fill="#1b1420" stroke="rgba(122, 91, 21,0.5)" strokeWidth="1.2"/>
+        <rect x="14" y="86" width="11" height="24" rx="5" fill="var(--bg)" stroke={BOT.purple} strokeWidth="1.2" strokeOpacity="0.7"/>
+        <rect x="31" y="86" width="11" height="24" rx="5" fill="var(--bg)" stroke={BOT.pink} strokeWidth="1.2" strokeOpacity="0.7"/>
         {/* feet */}
-        <rect x="11" y="106" width="16" height="10" rx="4" fill="#1b1420" stroke="rgba(122, 91, 21,0.6)" strokeWidth="1.2"/>
-        <rect x="29" y="106" width="16" height="10" rx="4" fill="#1b1420" stroke="rgba(122, 91, 21,0.6)" strokeWidth="1.2"/>
+        <rect x="11" y="106" width="16" height="10" rx="4" fill="var(--bg)" stroke={BOT.purple} strokeWidth="1.2" strokeOpacity="0.8"/>
+        <rect x="29" y="106" width="16" height="10" rx="4" fill="var(--bg)" stroke={BOT.pink} strokeWidth="1.2" strokeOpacity="0.8"/>
 
         {/* glow aura */}
-        <ellipse cx="28" cy="62" rx="32" ry="42" fill="rgba(122, 91, 21,0.025)"/>
+        <ellipse cx="28" cy="62" rx="32" ry="42" fill={BOT.purple} fillOpacity="0.03"/>
       </svg>
 
       {/* Laptop — appears during Projects section */}
