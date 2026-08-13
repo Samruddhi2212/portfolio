@@ -27,7 +27,7 @@ export default function Publications() {
                 <span className="venue">{pub.venue} · {pub.year}</span>
               </div>
               {pub.url && (
-                <a href={pub.url} target="_blank" rel="noopener noreferrer" className="mono" style={{ color: 'var(--cyan)', textDecoration: 'none', fontSize: '0.85rem' }}>
+                <a href={pub.url} target="_blank" rel="noopener noreferrer" className="mono" style={{ color: 'var(--gold)', textDecoration: 'none', fontSize: '0.85rem' }}>
                   Read →
                 </a>
               )}
