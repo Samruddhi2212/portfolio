@@ -9,7 +9,7 @@ export const profile = {
   role: 'MS Data Science Student · Deep Learning Researcher',
   tagline: 'Building deep learning systems from first principles.',
   summary:
-    "MS in Data Science student driven by a deep curiosity for building deep learning systems from first principles rather than treating them as black boxes — from Vision/Swin Transformers to RL-based detection pipelines built entirely from scratch. My research on mHealth for dementia care fuels my belief that AI should be built around real human needs. I hope to eventually pursue a PhD, and am using my master's to dig deeper into open research questions.",
+    "MS in Data Science student driven by a deep curiosity for building deep learning systems from first principles rather than treating them as black boxes — from Vision/Swin Transformers to RL-based detection pipelines built entirely from scratch. My research on mHealth for dementia care fuels my belief that AI should be built around real human needs.",
   location: 'San Jose, California',
   resumeUrl: '/resume.pdf',
   availability: 'Open to research collaborations & new opportunities',
@@ -17,8 +17,8 @@ export const profile = {
 
 export const about = {
   paragraphs: [
-    "I'm currently pursuing an MS in Data Science at Northeastern University (2025–2027), after a B.Tech in Computer Science from Cummins College of Engineering for Women, Pune, India (2020–2025). My coursework and research have centered on machine learning, deep learning, and reinforcement learning.",
-    "I like understanding systems from first principles — I've implemented Vision and Swin Transformers from scratch, formulated object detection as a reinforcement learning problem, and built ML pipelines for mHealth dementia care research. I'm using my master's to dig deeper into open research questions, with an eye toward eventually pursuing a PhD.",
+    "I'm currently pursuing an MS in Data Science at Northeastern University (2025–2027). My coursework and research have centered on machine learning, deep learning, and reinforcement learning.",
+    "I like understanding systems from first principles — I've implemented Vision and Swin Transformers from scratch, formulated object detection as a reinforcement learning problem, and built ML pipelines for mHealth dementia care research. I'm using my master's to dig deeper into open research questions.",
   ],
   facts: [
     { label: 'Based in', value: 'San Jose, CA' },
