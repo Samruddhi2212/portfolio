@@ -144,7 +144,7 @@ export const publications = [
 
 export const contact = {
   message:
-    "I'm currently open to research collaborations, PhD opportunities, and interesting problems in deep learning. Whether you have a question or just want to say hi — my inbox is always open.",
+    "I'm currently open to research collaborations and interesting problems in deep learning. Whether you have a question or just want to say hi — my inbox is always open.",
   email: 'kaledeshmukh.s@northeastern.edu',
   links: [
     { label: 'Email', value: 'kaledeshmukh.s@northeastern.edu', href: 'mailto:kaledeshmukh.s@northeastern.edu' },
