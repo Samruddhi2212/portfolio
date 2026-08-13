@@ -1,4 +1,4 @@
-# Hi, I'm Samruddhi's portfolio 👋
+# Portfolio
 
 **Live:** [samruddhi-kaledeshmukh.netlify.app](https://samruddhi-kaledeshmukh.netlify.app/)
 **Author:** [Samruddhi Kaledeshmukh](https://github.com/Samruddhi2212) — MS Data Science @ Northeastern, deep learning researcher
