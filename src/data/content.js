@@ -116,7 +116,7 @@ export const projects = [
     description:
       'Generated ML-ready data pipelines processing 10K+ daily behavioral events, enabling 95% signal consistency for downstream modeling and analytics. Implemented adaptive cognitive games, GPS-based safety alerts, and a voice-to-text diary, driving 75% higher user engagement and 80% faster real-time risk detection.',
     tags: ['Mobile Health', 'Reinforcement Learning', 'Adaptive Systems', 'Applied ML'],
-    image: null,
+    image: '/images/demcare-cover.svg',
     liveUrl: '',
     githubUrl: '',
     featured: false,
